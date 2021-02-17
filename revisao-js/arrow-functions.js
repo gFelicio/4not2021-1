@@ -39,3 +39,23 @@ console.log(funcaoMegasena(), funcaoMegasena(), funcaoMegasena())
 // console.log(Math.ceil(35.4943))
 // console.log(Math.round(35.4943))
 // console.log(Math.floor(35.4943))
+
+// Função com parametro de resto OU argumento de resto
+function somaTudo (...nums) {
+    let soma = 0
+    for (let n of nums) soma += n
+    return soma
+}
+
+// arrow function para funcoes com mais de uma linha de código
+// as chaves aparecem para encapsular a lógica
+// por conta do parametro ser um parametro de resto
+// os parenteses devem ser colocados para encapsular
+// esse parametro, pra mostrar que isso é um arg
+const funcaoSomaTudo = (...nums) => {
+    let soma = 0
+    for (let n of nums) soma += n
+    return soma
+}
+
+console.log(somaTudo(2,3,5), funcaoSomaTudo(2,3,5))
